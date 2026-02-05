@@ -1,0 +1,127 @@
+========================================
+FabricBukkitLoader 插件使用说明
+========================================
+
+【重要修改】
+Fabric mods现在存放在服务器根目录的 mods/ 文件夹中！
+（不再是 plugins/FabricBukkitLoader/mods/）
+
+========================================
+安装步骤
+========================================
+
+1. 安装插件
+   - 将 FabricBukkitLoader-1.0.0.jar 放入服务器的 plugins/ 文件夹
+
+2. 启动服务器
+   - 第一次启动会自动创建配置文件和目录
+
+3. 添加Fabric Mods
+   - 在服务器根目录创建 mods/ 文件夹（如果不存在）
+   - 将Fabric mod的 .jar 文件放入 mods/ 文件夹
+   - 重启服务器或使用 /fabricloader reload
+
+========================================
+目录结构
+========================================
+
+服务器根目录/
+├── mods/                          ← 放Fabric mods的地方
+│   ├── mod1.jar
+│   ├── mod2.jar
+│   └── ...
+│
+├── plugins/                       ← Bukkit插件目录
+│   ├── FabricBukkitLoader-1.0.0.jar
+│   └── ...
+│
+├── plugins/FabricBukkitLoader/    ← 插件配置目录
+│   ├── config.yml
+│   └── libs/
+│
+└── ...
+
+========================================
+常用命令
+========================================
+
+/fabricloader help        - 显示帮助
+/fabricloader info        - 显示插件信息
+/fabricloader mods        - 查看已加载的mods
+/fabricloader reload      - 重载插件
+
+/fabricloader load <mod>  - 加载指定mod（需要OP）
+/fabricloader unload <mod>- 卸载指定mod（需要OP）
+/fabricloader perf report - 显示性能报告（需要OP）
+/fabricloader perf mod <mod-id> - 显示特定mod性能报告（需要OP）
+/fabricloader perf reset  - 重置性能统计数据（需要OP）
+/fabricloader update      - 检查mod更新（需要OP）
+/fabricloader scan        - 扫描mod安全问题（需要OP）
+
+快捷命令：
+/fblmods                  - 快速查看mods列表
+/fbl                      - /fabricloader的别名
+
+========================================
+配置文件位置
+========================================
+
+plugins/FabricBukkitLoader/config.yml
+
+主要配置项：
+- enable-plugin-loading: true    # 启用mod加载
+- debug-logging: false           # 调试日志
+- mods-directory: "mods"         # mod目录（相对于服务器根目录）
+
+========================================
+权限节点
+========================================
+
+fabricbukkit.loader.*          - 所有权限
+fabricbukkit.loader.admin      - 管理权限（OP默认）
+fabricbukkit.loader.mods       - 查看mods列表（默认true）
+fabricbukkit.loader.reload     - 重载插件（OP默认）
+fabricbukkit.loader.info       - 查看信息（默认true）
+
+========================================
+故障排除
+========================================
+
+Q: Mod无法加载？
+A: 检查：
+   1. mod文件是否在服务器根目录的 mods/ 文件夹中
+   2. mod是否为Fabric 1.21+版本
+   3. 服务器日志中的错误信息
+   4. 尝试启用 debug-logging: true
+
+Q: 找不到mods文件夹？
+A: 在服务器根目录手动创建 mods/ 文件夹
+
+Q: 插件不工作？
+A: 确保：
+   - 服务器是Paper 1.21+
+   - Java版本是21
+   - 插件已正确安装到plugins/文件夹
+
+========================================
+支持的Mods类型
+========================================
+
+✅ 工具类mods
+✅ 建筑类mods
+✅ 存储类mods
+✅ 机械类mods
+✅ 科技类mods
+✅ 战斗类mods
+
+❌ 需要客户端支持的mods（如新方块渲染）
+   可能无法完全兼容
+
+========================================
+更多信息
+========================================
+
+查看 MODS_DIRECTORY_CHANGE.md 了解目录修改详情
+查看 README.md 获取完整文档
+
+========================================

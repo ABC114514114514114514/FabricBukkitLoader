@@ -1,0 +1,95 @@
+========================================
+FabricBukkitLoader 项目结构
+========================================
+
+【项目根目录】C:\Users\86186\Desktop\iflow\FabricBukkitLoader
+
+├── src/                          # 源代码目录
+│   └── main/
+│       ├── java/com/fabricbukkit/loader/
+│       │   ├── FabricBukkitLoader.java      # 主类
+│       │   ├── ModConfigManager.java        # 配置管理
+│       │   ├── ModLoader.java               # Mod加载器
+│       │   ├── EventAdapter.java            # 事件适配器
+│       │   ├── CommandAdapter.java          # 命令适配器
+│       │   ├── LoadedMod.java               # Mod实体类
+│       │   ├── ModDependency.java           # Mod依赖类
+│       │   ├── PerformanceMonitor.java      # 性能监控类
+│       │   ├── UpdateChecker.java           # 更新检查类
+│       │   ├── SecurityScanner.java         # 安全扫描类
+│       │   └── ItemProtectionSystem.java    # 物品保护类
+│       └── resources/
+│           └── plugin.yml                   # 插件配置
+│
+├── target/                       # 编译输出目录
+│   ├── FabricBukkitLoader-1.0.0.jar        # 完整插件（含依赖）
+│   └── original-FabricBukkitLoader-1.0.0.jar # 原始插件（不含依赖）
+│
+├── pom.xml                       # Maven配置文件
+├── config.yml                    # 默认配置文件
+│
+├── README.md                     # 英文说明文档
+├── MODS_DIRECTORY_CHANGE.md      # 目录修改说明
+├── 使用说明.txt                  # 中文使用指南
+└── 项目结构说明.txt              # 本文件
+
+========================================
+快速开始
+========================================
+
+1. 使用插件：
+   - 将 target/FabricBukkitLoader-1.0.0.jar 复制到 Paper服务器的 plugins/ 文件夹
+
+2. 开发/修改：
+   - 编辑 src/ 目录下的源代码
+   - 运行: mvn clean package
+   - 生成的jar在 target/ 目录
+
+3. 配置：
+   - 修改 config.yml 设置默认配置
+   - 查看 使用说明.txt 了解详细用法
+
+========================================
+文件说明
+========================================
+
+【核心文件】
+- pom.xml: Maven构建配置，定义依赖和插件
+- src/main/java/...: 插件源代码
+- src/main/resources/plugin.yml: 插件元数据
+
+【输出文件】
+- target/FabricBukkitLoader-1.0.0.jar: 最终插件文件（1.37MB）
+- target/original-FabricBukkitLoader-1.0.0.jar: 未包含依赖的插件（40KB）
+
+【文档文件】
+- README.md: 完整的英文文档
+- 使用说明.txt: 中文快速上手指南
+- MODS_DIRECTORY_CHANGE.md: mods目录位置修改记录
+
+========================================
+技术栈
+========================================
+
+- Java 21
+- Maven 3.9+
+- Paper API 1.21.1
+- Fabric Loader 0.15.11
+- SnakeYAML 2.2
+- Gson 2.10.1
+- Apache Commons Lang3 3.13.0
+
+========================================
+构建命令
+========================================
+
+# 编译并打包
+mvn clean package
+
+# 跳过测试
+mvn clean package -DskipTests
+
+# 清理构建产物
+mvn clean
+
+========================================

@@ -1,0 +1,72 @@
+# Fabric Bukkit Loader Configuration
+# This file controls the behavior of the plugin loader
+
+# Enable/disable plugin loading
+enable-plugin-loading: true
+
+# Enable/disable debug logging
+debug-logging: false
+
+# Mods directory path (relative to server root)
+mods-directory: "mods"
+
+# Auto-reload plugins on server restart
+auto-reload-plugins: true
+
+# Maximum number of plugins to load at once
+max-plugins: 100
+
+# Plugin compatibility mode
+# true: Attempt to load incompatible plugins
+# false: Only load compatible plugins
+allow-incompatible-plugins: false
+
+# Event adapter settings
+event-adapter:
+  # Enable event adapter
+  enabled: true
+  
+  # Priority handling
+  priority-handling: "NORMAL"
+  
+  # Event filtering
+  event-filtering: true
+
+# Command adapter settings
+command-adapter:
+  # Enable command adapter
+  enabled: true
+  
+  # Command aliases
+  enable-aliases: true
+  
+  # Command permissions
+  enable-permissions: true
+
+# Logging settings
+logging:
+  # Log plugin loading
+  log-plugin-loading: true
+  
+  # Log plugin errors
+  log-plugin-errors: true
+  
+  # Log command execution
+  log-command-execution: false
+  
+  # Log event handling
+  log-event-handling: false
+
+# Security settings
+security:
+  # Enable plugin signing verification
+  verify-plugin-signatures: false
+  
+  # Allow unsigned plugins
+  allow-unsigned-plugins: true
+  
+  # Whitelist plugins
+  whitelist-plugins: []
+  
+  # Blacklist plugins
+  blacklist-plugins: []

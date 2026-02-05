@@ -1,0 +1,69 @@
+name: FabricBukkitLoader
+version: '1.0.4'
+main: com.fabricbukkit.loader.FabricBukkitLoader
+api-version: '1.21'
+author: luzichen
+website: https://github.com/fabricbukkit/fabric-bukkit-loader
+description: 一个Paper插件，使服务器能够加载Fabric mods（中文版本）
+
+commands:
+  fabricloader:
+    description: FabricBukkitLoader主命令
+    usage: /fabricloader <reload|mods|info>
+    permission: fabricbukkit.loader.admin
+    aliases: [fbl, fabric]
+  
+  fblmods:
+    description: 列出已加载的Fabric mods
+    usage: /fblmods
+    permission: fabricbukkit.loader.mods
+    aliases: [fabricmods, modslist]
+
+permissions:
+  fabricbukkit.loader.*:
+    description: 所有FabricBukkitLoader权限
+    children:
+      fabricbukkit.loader.admin: true
+      fabricbukkit.loader.mods: true
+      fabricbukkit.loader.reload: true
+      fabricbukkit.loader.info: true
+      fabricbukkit.loader.performance: true
+      fabricbukkit.loader.update: true
+      fabricbukkit.loader.security: true
+  
+  fabricbukkit.loader.admin:
+    description: FabricBukkitLoader管理权限
+    default: op
+  
+  fabricbukkit.loader.mods:
+    description: 查看已加载的mods
+    default: true
+  
+  fabricbukkit.loader.reload:
+    description: 重载插件
+    default: op
+  
+  fabricbukkit.loader.info:
+    description: 查看插件信息
+    default: true
+  
+  fabricbukkit.loader.performance:
+    description: 查看性能统计信息
+    default: op
+  
+  fabricbukkit.loader.update:
+    description: 检查mod更新
+    default: op
+  
+  fabricbukkit.loader.security:
+    description: 扫描mod安全问题
+    default: op
+
+libraries:
+  - org.yaml:snakeyaml:2.2
+  - com.google.code.gson:gson:2.10.1
+  - org.apache.commons:commons-lang3:3.13.0
+
+load: POSTWORLD
+loadbefore: []
+softdepend: []

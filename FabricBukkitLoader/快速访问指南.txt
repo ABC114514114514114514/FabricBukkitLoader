@@ -1,0 +1,89 @@
+========================================
+FabricBukkitLoader - 快速访问指南
+========================================
+
+【项目位置】
+C:\Users\86186\Desktop\iflow\FabricBukkitLoader
+
+【核心文件】
+
+1. 插件文件（中文版本 - 推荐）
+   → target\FabricBukkitLoader-1.0.4.jar
+   大小: ~1.39 MB
+   版本: 1.0.4（功能增强版，完整汉化）
+   
+2. 插件文件（英文版本）
+   → target\FabricBukkitLoader-1.1.0.jar
+   大小: ~1.36 MB
+   版本: 1.1.0
+   
+3. 中文版本说明（重要！）
+   → 中文版本说明.txt   ← 查看中文版本详情
+   
+4. 修复说明（重要！）
+   → 修复说明.txt       ← 查看问题修复和更新步骤
+   
+5. 使用说明（中文）
+   → 使用说明.txt
+   
+6. 项目结构说明
+   → 项目结构说明.txt
+   
+7. 安装脚本
+   → 安装到服务器.bat
+   
+8. 验证脚本
+   → 验证项目.bat
+   
+9. 中文版本快速开始
+   → 快速开始-中文版本.bat
+
+【快速操作 - 中文版本】
+
+⚠️  首次使用或更新（推荐中文版本）：
+  1. 阅读：中文版本说明.txt
+  2. 双击运行：快速开始-中文版本.bat
+  3. 验证通过后，运行：安装到服务器.bat
+  4. 拖放服务器根目录到窗口
+  5. 按提示完成安装
+
+查看文档：
+  - 中文版本说明.txt   ← 中文版本详情（重要）
+  - 修复说明.txt       ← 问题修复和更新步骤（重要）
+  - 使用说明.txt       ← 中文快速上手指南
+  - README.md          ← 完整英文文档
+  - 项目结构说明.txt   ← 项目结构和构建说明
+
+验证项目：
+  - 双击运行：验证项目.bat
+  - 或运行：快速开始-中文版本.bat
+
+重新编译：
+  - 打开命令行，运行: mvn clean package
+
+【关键信息】
+
+插件名称: FabricBukkitLoader
+版本: 1.0.0
+目标平台: Paper 1.21+
+Java版本: 21
+
+mods存放位置: 服务器根目录/mods/
+配置文件: plugins/FabricBukkitLoader/config.yml
+
+【主要命令】
+
+/fabricloader help    - 帮助
+/fabricloader info    - 插件信息
+/fabricloader mods    - 查看mods
+/fabricloader reload  - 重载插件
+/fblmods              - 快速查看mods
+
+【文档索引】
+
+快速上手 → 使用说明.txt
+项目结构 → 项目结构说明.txt
+英文文档 → README.md
+修改记录 → MODS_DIRECTORY_CHANGE.md
+
+========================================

@@ -1,0 +1,130 @@
+# Fabric Bukkit Loader Configuration
+# This file controls the behavior of the plugin loader
+
+# Enable/disable plugin loading
+enable-plugin-loading: true
+
+# Enable/disable debug logging
+debug-logging: false
+
+# Mods directory path (relative to server root)
+mods-directory: "mods"
+
+# Auto-reload plugins on server restart
+auto-reload-plugins: true
+
+# Maximum number of plugins to load at once
+max-plugins: 100
+
+# Plugin compatibility mode
+# true: Attempt to load incompatible plugins
+# false: Only load compatible plugins
+allow-incompatible-plugins: false
+
+# Event adapter settings
+event-adapter:
+  # Enable event adapter
+  enabled: true
+  
+  # Priority handling
+  priority-handling: "NORMAL"
+  
+  # Event filtering
+  event-filtering: true
+
+# Command adapter settings
+command-adapter:
+  # Enable command adapter
+  enabled: true
+  
+  # Command aliases
+  enable-aliases: true
+  
+  # Command permissions
+  enable-permissions: true
+
+# Logging settings
+logging:
+  # Log plugin loading
+  log-plugin-loading: true
+  
+  # Log plugin errors
+  log-plugin-errors: true
+  
+  # Log command execution
+  log-command-execution: false
+  
+  # Log event handling
+  log-event-handling: false
+
+# Security settings
+security:
+  # Enable plugin signing verification
+  verify-plugin-signatures: false
+  
+  # Allow unsigned plugins
+  allow-unsigned-plugins: true
+  
+  # Whitelist plugins
+  whitelist-plugins: []
+  
+  # Blacklist plugins
+  blacklist-plugins: []
+
+# Dependency check settings
+dependency-check:
+  # Enable dependency checking
+  enabled: true
+  
+  # Enable conflict detection between mods
+  conflict-detection: true
+  
+  # Enforce version compatibility
+  enforce-version-compatibility: true
+
+# Priority loading settings
+priority-loading:
+  # Enable priority loading
+  enabled: true
+  
+  # List of mods to load with high priority (order matters)
+  priority-mods:
+    - "fabric-api-base"
+    - "fabric-resource-loader-v0"
+    - "fabric-lifecycle-events-v1"
+
+# Item protection settings
+item-protection:
+  # Action to take when problematic mod items are detected
+  # Options: "protect", "replace", "remove", "warn"
+  # "protect" - Monitors and prevents disconnections (recommended)
+  # "replace" - Replaces mod items with safe vanilla items
+  # "remove" - Removes mod items from player inventory
+  # "warn" - Only warns about problematic items
+  action: "protect"
+  
+  # Enable item replacement (only used when action is "replace")
+  enable-replacement: false
+  
+  # Enable item removal (only used when action is "remove")
+  enable-removal: false
+
+# Dependency check settings
+dependency-check:
+  # Enable dependency checking
+  enabled: true
+  
+  # Enable conflict detection between mods
+  conflict-detection: true
+  
+  # Enforce version compatibility
+  enforce-version-compatibility: true
+  
+  # Enable enhanced dependency checking with better compatibility
+  enhanced-check: true
+  
+  # Allow optional dependencies to be missing
+  allow-optional: true
+  
+  # Use loose version checking for better compatibility
+  loose-version-check: true
